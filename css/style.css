@@ -1,15 +1,19 @@
-/* red FB7277 */
-/* light grey 494F56 */
-/* dark grey 3A3F45 */
-/* light violet 8B809F */
-/* violet 7D7294 */
-/* active violet 655B78 */
-/* soft white aaa5b5 */
 body {
 	margin: 20px 15px;
-	font-family: “Trebuchet MS”, Trebuchet, Arial, sans-serif;
+	font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
 }
-header {
+
+main {
+	background-color: #3A3F45;
+	padding-bottom: 50px;
+}
+
+p, 
+ul {
+	margin: 0;
+}
+
+.shopping-list-header {
 	color: #FB7277;
 	background-color: #494F56;
 	text-align: center;
@@ -17,29 +21,29 @@ header {
 	padding-bottom: 20px;
 }
 
-.subtitle {
-	font-size: 25px;
+.shopping-list-title {
+	font-size: 30px;
+    margin-bottom: 10px;
 }
 
-main {
-	background-color: #3A3F45;
-	padding-top: 35px;
-	padding-bottom: 50px;
+.shopping-list-subtitle {
+	font-size: 16px;
 }
 
-p, ul {
-	margin: 0;
-}
-
-ul + h2 {
+.shopping-list-footer {
 	background-color: #494F56;
 	color: #FB7277;
 	height: 50px;
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 25px;
 }
 
-ul, h2 {
+.shopping-list-footer > p {
+	font-size: 20px;
+}
+
+ul, 
+.shopping-list-footer {
 	width: 70%;
 	margin-left: auto;
 	margin-right: auto;
@@ -52,6 +56,8 @@ h1 {
 ul {
 	list-style: none;
 	padding: 0;
+	margin: 30px auto;
+
 }
 
 li:nth-child(odd) {
@@ -62,7 +68,7 @@ li:nth-child(even) {
 	background-color: #7D7294;
 }
 
-li:hover,
+li:hover, 
 li:active {
 	background-color: #655B78;
 	border-top: 3px solid white;
@@ -74,9 +80,12 @@ li:active {
 	background-color: #FB7277;
 }
 
+label {
+	display: inline-block;
+	padding: 15px;
+}
 
 li {
-	padding: 15px;
 	color: white;
 	font-size: 25px;
 	border-top: 3px solid transparent;
@@ -85,21 +94,15 @@ li {
 	cursor: pointer;
 }
 
-li > span > span {
-	display: inline-block;
-	color: #aaa5b5;
-	margin-left: 15px;
-}
-
-li > span > span:before {
+.shopping-list-details::before {
 	content: "(";
 }
 
-li > span > span:after {
+.shopping-list-details::after {
 	content: ")";
 }
 
-input[type='checkbox'] {
+.checkbox {
 	margin-top: 0;
     margin-right: 10px;
 	transform: scale(2);
@@ -107,11 +110,14 @@ input[type='checkbox'] {
 	cursor: pointer;
 }
 
-input[type='checkbox']:checked + span,
-input[type='checkbox']:checked + span > span {
+.checkbox:checked + span,
+.checkbox:checked + span > .shopping-list-details {
 	text-decoration: line-through;
+	color: #aaa5b5;
 }
 
-input[type='checkbox']:checked + span {
+.shopping-list-details {
+	display: inline-block;
 	color: #aaa5b5;
+	margin-left: 15px;
 }

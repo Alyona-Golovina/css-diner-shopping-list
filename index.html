@@ -7,66 +7,88 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<header>
-		<h1>CSS dinner shopping list</h1>
-		<p class="subtitle">
-			Let's go to the mall!
-		</p>
-	</header>
 	<main>
-		<ul>
-			<li>
-				<input type="checkbox">
-				<span>
-					A lot of pickles
-					<span>
-						for the next lessons about CSS
-					</span>
-				</span>
-			</li>
-			<li><input type="checkbox">
-				<span>
-					10 apples
-					<span>
-						for more CSS manipulations
-					</span>	
-				</span>
-				
-			</li>
-			<li><input type="checkbox">
-				<span>
-					20 oranges
-					<span>
-						because they are awesome
-					</span>	
-				</span>	
-			</li>
-			<li><input type="checkbox">
-				<span>
-					13 plates
-					<span>
-						hm...they always disappear
-					</span>	
-				</span>
-				
-			</li>
-			<li><input type="checkbox">
-				<span>
-					15 bentos
-				</span>
-				
-			</li>
-			<li><input type="checkbox">
-				<span>
-					1 bottle of Sake ^_^
-					<span>
-						for my friends
-					</span>	
-				</span>
-				
-			</li>
-		</ul>
-		<h2>Bon appetit :)</h2>
+		<article class="shopping-list">
+			<header class="shopping-list-header">
+				<h1 class="shopping-list-title">CSS dinner shopping list</h1>
+				<p class="shopping-list-subtitle">
+					Let's go to the mall!
+				</p>
+			</header>
+			<form action="#" method="POST">
+				<ul>
+					<li>
+						<label class="label">
+							<input type="checkbox" class="checkbox">
+							<span>
+								A lot of pickles
+								<span class="shopping-list-details">
+									for the next lessons about CSS
+								</span>
+							</span>
+						</label>
+					</li>
+					<li>
+						<label class="label">
+							<input type="checkbox" class="checkbox">
+							<span>
+								10 apples
+								<span class="shopping-list-details">
+									for more CSS manipulations
+								</span>	
+							</span>
+						</label>
+					</li>
+					<li>
+						<label class="label">
+							<input type="checkbox" class="checkbox">
+							<span>
+								20 oranges
+								<span class="shopping-list-details">
+									because they are awesome
+								</span>	
+							</span>	
+						</label>
+					</li>
+					<li>
+						<label class="label">
+							<input type="checkbox" class="checkbox">
+							<span>
+								13 plates
+								<span class="shopping-list-details">
+									hm...they always disappear
+								</span>	
+							</span>
+						</label>
+					</li>
+					<li>
+						<label class="label">
+							<input type="checkbox" class="checkbox">
+							<span>
+								15 bentos
+							</span>
+						</label>
+					</li>
+					<li>
+						<label class="label">
+							<input type="checkbox" class="checkbox">
+							<span>
+								1 bottle of Sake ^_^
+								<span class="shopping-list-details">
+									for my friends
+								</span>	
+							</span>
+						</label>
+					</li>
+				</ul>
+				<button type="submit" hidden>
+					Send
+				</button>
+			</form>
+			<footer class="shopping-list-footer">
+				<p>Bon appetit :)</p>
+			</footer>
+		</article>
 	</main>
 </body>
 </html>
