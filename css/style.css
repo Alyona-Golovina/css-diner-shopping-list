@@ -1,5 +1,9 @@
+html {
+	background-color: #3A3F45;
+}
+
 body {
-	margin: 20px 15px;
+	margin: 0;
 	font-family: "Trebuchet MS", Trebuchet, Arial, sans-serif;
 }
 
